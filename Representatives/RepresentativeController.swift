@@ -12,30 +12,36 @@ class RepresentativeController {
     
     static let sharedInstance = RepresentativeController()
     
-    static func stateSearch(url: String, completion: (result: Representative?) -> Void) {
+    static func stateSearch(url: String, completion: (representatives: [Representative]) -> Void) {
         let urlString = NetworkController.searchURL(url)
         
         NetworkController.dataAtURL(urlString) { (resultData) -> Void in
             
             guard let resultData = resultData else {
                 print("Error, data not received")
-                completion(result: nil)
+                completion(representatives: [])
                 return
             }
             
             do {
-                let repAnyObject = try NSJSONSerialization.JSONObjectWithData(resultData, options: NSJSONReadingOptions.AllowFragments)
+                let repAnyObject = try NSJSONSerialization.JSONObjectWithData(resultData, options: NSJSONReadingOptions.AllowFragments) as! [String: AnyObject]
                 
-                var representative: Representative?
+                var representativeArray: [Representative] = []
                 
-                if let repDictionary = repAnyObject as? [String: String] {
-                    representative = Representative(jsonDictionary: repDictionary)
+                let repDictionary = repAnyObject[Representative.kResultsKey] as! [[String: String]]
+                
+                for dictionary in repDictionary {
+                    let rep = Representative(jsonDictionary: dictionary)
+                    representativeArray.append(rep)
                 }
-                completion(result: representative)
+                    
+                
+                completion(representatives: representativeArray)
                 
             } catch {
-                completion(result: nil)
-                
+                print("Error serializing JSON")
+                completion(representatives: [])
+                return
             }
         }
         

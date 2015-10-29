@@ -17,6 +17,7 @@
 		8306D8191BE2C46A00E45034 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306D8181BE2C46A00E45034 /* NetworkController.swift */; };
 		8306D81B1BE2CA6800E45034 /* RepresentativeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306D81A1BE2CA6800E45034 /* RepresentativeController.swift */; };
 		DEDCE57B1BE2B6E500ABB9DD /* Representative.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDCE57A1BE2B6E500ABB9DD /* Representative.swift */; };
+		E62AE0551BE2D50400FD29C7 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62AE0541BE2D50400FD29C7 /* ResultsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		8306D8181BE2C46A00E45034 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		8306D81A1BE2CA6800E45034 /* RepresentativeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepresentativeController.swift; sourceTree = "<group>"; };
 		DEDCE57A1BE2B6E500ABB9DD /* Representative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Representative.swift; sourceTree = "<group>"; };
+		E62AE0541BE2D50400FD29C7 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				01AD25FF1BE171D9009BF4D2 /* AppDelegate.swift */,
 				01AD262D1BE17215009BF4D2 /* SearchViewController.swift */,
 				01AD26031BE171D9009BF4D2 /* Main.storyboard */,
+				E62AE0541BE2D50400FD29C7 /* ResultsTableViewController.swift */,
 				8306D8181BE2C46A00E45034 /* NetworkController.swift */,
 				8306D81A1BE2CA6800E45034 /* RepresentativeController.swift */,
 				DEDCE57A1BE2B6E500ABB9DD /* Representative.swift */,
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E62AE0551BE2D50400FD29C7 /* ResultsTableViewController.swift in Sources */,
 				8306D81B1BE2CA6800E45034 /* RepresentativeController.swift in Sources */,
 				8306D8191BE2C46A00E45034 /* NetworkController.swift in Sources */,
 				01AD262E1BE17215009BF4D2 /* SearchViewController.swift in Sources */,
