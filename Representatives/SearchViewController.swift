@@ -31,6 +31,11 @@ class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
    
     @IBAction func searchButtonTapped(sender: UIButton) {
+        
+        let url = NetworkController.searchURL("CA")
+        NetworkController.dataAtURL(url) { (resultData) -> Void in
+        
+        }
     }
     
     
