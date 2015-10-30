@@ -12,7 +12,7 @@ class NetworkController {
 
     static func searchURL(state: String) -> NSURL {
         
-        let baseURL = "http://whoismyrepresentative.com/getall_reps_bystate.php?state=\(state)"
+        let baseURL = "http://whoismyrepresentative.com/getall_reps_bystate.php?state=\(state)&output=json"
         return NSURL(string: baseURL)!
         
     }

@@ -50,6 +50,33 @@ class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         }
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "showRep" {
+            
+            let displayReps = segue.destinationViewController as!ResultsTableViewController
+                _ = displayReps.view
+                
+              ResultsTableViewController.representativeArray = self.repResult
+             
+            }
+            
+            
+            
+        }
+        
+        
+        
     
     
-}
+    
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+
